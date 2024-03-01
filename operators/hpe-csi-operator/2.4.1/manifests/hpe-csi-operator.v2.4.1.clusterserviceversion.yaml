@@ -203,12 +203,12 @@ spec:
             description: HPE CSI Driver Helm release status
             path: conditions
             x-descriptors:
-              - 'urn:alm:descriptor:io.kubernetes.conditions'
+              - "urn:alm:descriptor:io.kubernetes.conditions"
           - displayName: DeployedRelease
             description: HPE CSI Driver Helm release
             path: deployedRelease
             x-descriptors:
-              - 'urn:alm:descriptor:text'
+              - "urn:alm:descriptor:text"
     required: []
   install:
     strategy: deployment
