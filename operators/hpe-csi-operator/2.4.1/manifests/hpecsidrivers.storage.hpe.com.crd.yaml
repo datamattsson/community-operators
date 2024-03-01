@@ -36,9 +36,7 @@ spec:
             description: HPECSIDriverSpec defines the desired state of HPECSIDriver
             properties:
               disable:
-                description: 'INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-                  Important: Run "make" to regenerate code after modifying this file
-                  Control CSP Service and Deployments for HPE storage products'
+                description: Control CSP Service and Deployments for HPE storage products
                 properties:
                   alletra6000:
                     type: boolean

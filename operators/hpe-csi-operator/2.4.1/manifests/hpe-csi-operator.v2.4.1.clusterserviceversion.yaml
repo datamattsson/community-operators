@@ -131,49 +131,73 @@ spec:
             description: Image pull policy for all images used in the HPE CSI Driver deployment
             path: imagePullPolicy
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:imagePullPolicy'
+              - "urn:alm:descriptor:com.tectonic.ui:imagePullPolicy"
           - displayName: Log level
-            description: 'Log level for HPE CSI Driver (trace, debug, warn, info, error)'
+            description: "Log level for HPE CSI Driver (trace, debug, warn, info, error)"
             path: logLevel
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - "urn:alm:descriptor:com.tectonic.ui:text"
           - displayName: Flavor
-            description: 'Flavor of CO Orchestrator (kubernetes, openshift)'
+            description: "Flavor of CO Orchestrator (kubernetes, openshift)"
             path: flavor
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
-          - displayName: Disables automatic installation of iSCSI, multipath packages
-            description: 'Disable node conformance (default: false)'
+              - "urn:alm:descriptor:com.tectonic.ui:hidden"
+          - displayName: Disable CSP
+            description: "Control CSP Service and Deployments for HPE storage products"
+            path: disable
+          - displayName: Nimble Storage
+            description: "Disable Nimble Storage"
+            path: disable.nimble
+            x-descriptors:
+              - "urn:alm:descriptor:com.tectonic.ui:checkbox"
+          - displayName: Primera
+            description: "Disable Primera (and 3PAR)"
+            path: disable.primera
+            x-descriptors:
+              - "urn:alm:descriptor:com.tectonic.ui:checkbox"
+          - displayName: Alletra 5000/6000
+            description: "Disable Alletra 5000/6000"
+            path: disable.alletra6000
+            x-descriptors:
+              - "urn:alm:descriptor:com.tectonic.ui:checkbox"
+          - displayName: Alletra 9000
+            description: "Disable Alletra 9000"
+            path: disable.alletra9000
+            x-descriptors:
+              - "urn:alm:descriptor:com.tectonic.ui:checkbox"
+          - displayName: Alletra Storage MP
+            description: "Disable Alletra Storage MP"
+            path: disable.alletraStorageMP
+            x-descriptors:
+              - "urn:alm:descriptor:com.tectonic.ui:checkbox"
+          - displayName: Disable Node Conformance
+            description: "Disables automatic installation of iSCSI, multipath packages (default: false)"
             path: disableNodeConformance
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:booleanSwitch'
-          - displayName: Disables default configurations performed by CSI plugin on node(s)
-            description: 'Disable node configuration (default: false)'
+              - "urn:alm:descriptor:com.tectonic.ui:booleanSwitch"
+          - displayName: Disable Node Configuration
+            description: "Disables default configurations performed by CSI plugin on node(s) (default: false)"
             path: disableNodeConfiguration
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:booleanSwitch'
+              - "urn:alm:descriptor:com.tectonic.ui:booleanSwitch"
           - displayName: iSCSI Configuration
-            description: 'iSCSI Configuration'
+            description: "iSCSI Configuration"
             path: iscsi
-            x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:radio'
           - displayName: iSCSI CHAP username
-            description: 'Username for iSCSI CHAP authentication'
+            description: "Username for iSCSI CHAP authentication"
             path: iscsi.chapUsername
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:fieldGroup:iscsi'
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - "urn:alm:descriptor:com.tectonic.ui:text"
           - displayName: iSCSI CHAP password
-            description: 'Password for iSCSI CHAP authentication'
+            description: "Password for iSCSI CHAP authentication"
             path: iscsi.chapPassword
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:fieldGroup:iscsi'
-              - 'urn:alm:descriptor:com.tectonic.ui:password'
+              - "urn:alm:descriptor:com.tectonic.ui:password"
           - displayName: Registry
-            description: 'Registry for HPE CSI Driver (quay.io)'
+            description: "Registry for HPE CSI Driver (quay.io)"
             path: registry
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - "urn:alm:descriptor:com.tectonic.ui:text"
         statusDescriptors:
           - displayName: Conditions
             description: HPE CSI Driver Helm release status
