@@ -18,7 +18,8 @@ metadata:
                "nimble": false,
                "primera": false,
                "alletra6000": false,
-               "alletra9000": false
+               "alletra9000": false,
+               "alletraStorageMP": false
             },
             "imagePullPolicy": "IfNotPresent",
             "logLevel": "info",
@@ -83,7 +84,7 @@ spec:
   maturity: stable
   version: 2.4.1
   replaces: hpe-csi-operator.v2.4.0
-  minKubeVersion: 1.25.0
+  minKubeVersion: 1.26.0
   keywords:
     - HPE
     - HPE CSI
@@ -91,7 +92,7 @@ spec:
     - CSI
   maintainers:
     - name: HPE Storage Containers Team
-      email: hpe-containers-dev@hpe.com
+      email: dev-hi-containers@hpe.com
   provider:
     name: HPE
   labels: {}
